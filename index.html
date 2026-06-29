@@ -3,32 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maggie Ye — Engineering Portfolio</title>
+    <title>Maggie — Engineering Portfolio</title>
     <style>
-        /* This is the CSS that makes it look clean like your brother's site */
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        header { display: flex; align-items: center; gap: 30px; margin-bottom: 40px; flex-wrap: wrap; }
-        .profile-pic { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
-        h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
-        .subtitle { color: #666; font-size: 1.2rem; margin-bottom: 15px; }
-        .btn { display: inline-block; padding: 8px 16px; background: #0076ff; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; margin-right: 10px; }
-        .btn-alt { background: #f0f0f0; color: #333; }
-        section { margin-bottom: 40px; border-top: 1px solid #eee; padding-top: 20px; }
-        h2 { color: #111; }
-        .job { margin-bottom: 20px; }
-        .job-title { font-weight: bold; font-size: 1.1rem; }
-        .job-meta { color: #888; font-size: 0.9rem; }
-        ul { padding-left: 20px; }
+        /* Modern Industrial Palette & Typography */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            line-height: 1.6; 
+            color: #2d3748; 
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 40px 20px;
+            background-color: #f8fafc;
+        }
+        
+        /* Centered Header Design */
+        header { 
+            text-align: center;
+            margin-bottom: 50px; 
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .profile-pic { 
+            width: 130px; 
+            height: 130px; 
+            border-radius: 16px; /* Sleek rounded square instead of circle */
+            object-fit: cover; 
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        h1 { margin: 0 0 8px 0; font-size: 2.6rem; color: #1a202c; font-weight: 800; letter-spacing: -0.5px; }
+        .subtitle { color: #4f46e5; font-size: 1.25rem; font-weight: 600; margin-bottom: 15px; }
+        .location { color: #718096; font-size: 0.95rem; margin-bottom: 20px; }
+        
+        /* Premium Action Buttons */
+        .btn-container { display: flex; justify-content: center; gap: 12px; }
+        .btn { display: inline-block; padding: 10px 24px; background: #1e293b; color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: background 0.2s; }
+        .btn:hover { background: #4f46e5; }
+        .btn-alt { background: white; color: #1e293b; border: 1px solid #cbd5e1; }
+        .btn-alt:hover { background: #f1f5f9; color: #4f46e5; }
+        
+        /* Section Layouts */
+        section { margin-bottom: 50px; }
+        h2 { color: #1e293b; font-size: 1.5rem; border-left: 4px solid #4f46e5; padding-left: 12px; margin-bottom: 25px; }
+        
+        /* Engineering Project Grid / Cards */
+        .project-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media(min-width: 600px) { .project-grid { grid-template-columns: 1fr 1fr; } }
+        
+        .project-card { 
+            background: white; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 12px; 
+            padding: 24px; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .project-title { font-weight: 700; font-size: 1.2rem; color: #1a202c; margin-bottom: 4px; }
+        .project-meta { color: #4f46e5; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+        
+        ul { padding-left: 20px; margin-top: 10px; }
+        li { margin-bottom: 6px; font-size: 0.95rem; }
+        
+        /* Skills Tags */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-tag { background: #e2e8f0; color: #334155; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="your-photo.jpg" alt="Your Name" class="profile-pic">
-        <div>
-            <h1>Maggie Ye</h1>
-            <div class="subtitle">Mechanical Engineering Student</div>
-            <p>Seattle, WA</p>
+        <img src="your-photo.jpg" alt="Maggie" class="profile-pic">
+        <h1>Maggie</h1>
+        <div class="subtitle">Engineering Student — Robotics & Design</div>
+        <div class="location">Los Angeles, CA</div>
+        <div class="btn-container">
             <a href="#contact" class="btn">Contact Me</a>
             <a href="resume.pdf" class="btn btn-alt">Download Resume</a>
         </div>
@@ -36,42 +83,52 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Innovative and hands-on Engineering Student with a focus on robotics, embedded systems, and digital modeling. Experienced in translating complex designs into functional prototypes, programming microcontrollers, and troubleshooting hardware-software integration.</p>
+        <p>Innovative and hands-on engineering student focused on mechanical layout, embedded electronics, and parametric design. Experienced in developing custom hardware configurations, executing rigorous academic testing updates, and translating raw concepts into functional prototypes.</p>
     </section>
 
     <section id="projects">
         <h2>Featured Projects</h2>
-        <div class="job">
-            <div class="job-title">Self-Balancing Autonomous Robot</div>
-            <div class="job-meta">Embedded Systems & Control</div>
-            <p>Designed and built a two-wheeled self-balancing robot utilizing an ESP32 microcontroller. Configured motor drivers, tuned control loops for real-time stability, and handled hardware connections on a custom breadboard layout.</p>
-        </div>
-        <div class="job">
-            <div class="job-title">Self-Balancing Autonomous Robot</div>
-            <div class="job-meta">Embedded Systems & Control | ESP32 Platform</div>
-            <p>Designed and built a two-wheeled self-balancing robot featuring active stabilization and real-time control loops.</p>
-            <ul>
-                <li>Programmed an ESP32 microcontroller using the Arduino IDE to handle high-frequency sensor readings and motor outputs.</li>
-                <li>Integrated hardware components on a custom breadboard layout, wiring up micro servos, stepper motors, and driver modules.</li>
-                <li>Calibrated control loop parameters to achieve smooth dynamic balancing and stability under active load changes.</li>
-            </ul>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <div class="project-title">Self-Balancing Autonomous Robot</div>
+                <div class="project-meta">Embedded Systems & Control</div>
+                <p>Designed and built a two-wheeled self-balancing robot utilizing an ESP32 microcontroller configured in the Arduino IDE.</p>
+                <ul>
+                    <li>Integrated real-time stability control parameters to drive micro servos and stepper motors.</li>
+                    <li>Designed and validated all electrical hardware layouts on a custom breadboard configuration.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Parametric Hub Design</div>
+                <div class="project-meta">SolidWorks Modeling</div>
+                <p>Developed a precision 3D CAD model of an engineering hub following strict multi-view geometric standards.</p>
+                <ul>
+                    <li>Modeled intricate 24mm outer diameter features and 15mm segment heights.</li>
+                    <li>Configured complex slanted ramp faces and precise view-orientation standard sets.</li>
+                </ul>
+            </div>
+            
         </div>
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>CAD & Modeling:</strong> SolidWorks</li>
-            <li><strong>Embedded Systems:</strong> ESP32, Arduino IDE, Micro Servos, Stepper Motors</li>
-            <li><strong>Programming:</strong> C++, Python</li>
-            <li><strong>Fabrication:</strong> Hands-on prototyping, electronics wiring, soldering</li>
-        </ul>
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <span class="skill-tag">SolidWorks CAD</span>
+            <span class="skill-tag">ESP32 & Arduino IDE</span>
+            <span class="skill-tag">Micro Servos & Stepper Motors</span>
+            <span class="skill-tag">C++ & Python</span>
+            <span class="skill-tag">Hardware Troubleshooting</span>
+            <span class="skill-tag">Structural Mechanics</span>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: ye.maggie06@gmail.com</p>
-        <p>GitHub: <a href="#">yourusername</a> | LinkedIn: <a href="#">yourprofile</a></p>
+    <section id="contact" style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #e2e8f0;">
+        <h2>Get In Touch</h2>
+        <p>Email: your.email@example.com</p>
+        <p>GitHub: <a href="https://github.com/yemaggie" style="color: #4f46e5;">yemaggie</a></p>
     </section>
 
 </body>
