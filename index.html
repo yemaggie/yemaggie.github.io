@@ -5,15 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maggie — Engineering Portfolio</title>
     <style>
-        /* Modern Industrial Palette & Typography */
+        /* Modern Industrial Palette & Typography - Margins reset for full-width nav */
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
             line-height: 1.6; 
             color: #2d3748; 
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+        }
+        
+        /* Full-Width Navigation Banner */
+        nav {
+            background: white; 
+            border-bottom: 1px solid #e2e8f0; 
+            padding: 20px 0;
+            width: 100%;
+        }
+        .nav-container {
             max-width: 850px; 
             margin: 0 auto; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 0 20px;
+        }
+
+        /* Central Content Wrapper */
+        .main-content {
+            max-width: 850px;
+            margin: 0 auto;
             padding: 40px 20px;
-            background-color: #f8fafc;
         }
         
         /* Centered Header Design */
@@ -36,7 +58,7 @@
         .location { color: #718096; font-size: 0.95rem; margin-bottom: 20px; }
         
         /* Premium Action Buttons */
-        .btn-container { display: flex; justify-content: center; gap: 12px; }
+        .btn-container { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
         .btn { display: inline-block; padding: 10px 24px; background: #1e293b; color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: background 0.2s; }
         .btn:hover { background: #4f46e5; }
         .btn-alt { background: white; color: #1e293b; border: 1px solid #cbd5e1; }
@@ -68,8 +90,11 @@
         .skill-tag { background: #e2e8f0; color: #334155; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
     </style>
 </head>
-    <nav style="background: white; border-bottom: 1px solid #e2e8f0; padding: 15px 0; margin-bottom: 30px;">
-        <div style="max-width: 850px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+<body>
+
+    <!-- Spans the full screen width -->
+    <nav>
+        <div class="nav-container">
             <a href="index.html" style="font-weight: 700; color: #1e293b; text-decoration: none;">Maggie</a>
             <div style="display: flex; gap: 20px;">
                 <a href="index.html" style="color: #4f46e5; text-decoration: none; font-weight: 600;">Home</a>
@@ -77,69 +102,74 @@
             </div>
         </div>
     </nav>
-<body>
 
-    <header>
-        <img src="your-photo.jpg" alt="Maggie" class="profile-pic">
-        <h1>Maggie Ye</h1>
-        <div class="subtitle">Mechanical Engineering Student</div>
-        <div class="location">Seattle, WA</div>
-        <div class="btn-container">
-            <a href="#contact" class="btn">Contact Me</a>
-            <a href="resume.pdf" class="btn btn-alt">Download Resume</a>
-        </div>
-    </header>
+    <!-- Bounds your content in the center -->
+    <div class="main-content">
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Innovative and hands-on engineering student focused on mechanical layout, embedded electronics, and parametric design. Experienced in developing custom hardware configurations, executing rigorous academic testing updates, and translating raw concepts into functional prototypes.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            
-            <div class="project-card">
-                <div class="project-title">Self-Balancing Autonomous Robot</div>
-                <div class="project-meta">Embedded Systems & Control</div>
-                <p>Designed and built a two-wheeled self-balancing robot utilizing an ESP32 microcontroller configured in the Arduino IDE.</p>
-                <ul>
-                    <li>Integrated real-time stability control parameters to drive micro servos and stepper motors.</li>
-                    <li>Designed and validated all electrical hardware layouts on a custom breadboard configuration.</li>
-                </ul>
+        <header>
+            <img src="your-photo.jpg" alt="Maggie" class="profile-pic">
+            <h1>Maggie Ye</h1>
+            <div class="subtitle">Mechanical Engineering Student</div>
+            <div class="location">Seattle, WA</div>
+            <div class="btn-container">
+                <a href="#contact" class="btn">Contact Me</a>
+                <a href="resume.pdf" class="btn btn-alt">Download Resume</a>
+                <a href="projects.html" class="btn btn-alt">Projects</a>
             </div>
+        </header>
 
-            <div class="project-card">
-                <div class="project-title">Self-Balancing Autonomous Robot</div>
-                <div class="project-meta">Embedded Systems & Control | ESP32 Platform</div>
-                <p>Designed and built a two-wheeled self-balancing robot featuring active stabilization and real-time control loops.</p>
-                <ul>
-                    <li>Programmed an ESP32 microcontroller using the Arduino IDE to handle high-frequency sensor readings and motor outputs.</li>
-                    <li>Integrated hardware components on a custom breadboard layout, wiring up micro servos, stepper motors, and driver modules.</li>
-                    <li>Calibrated control loop parameters to achieve smooth dynamic balancing and stability under active load changes.</li>
-                </ul>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Innovative and hands-on engineering student focused on mechanical layout, embedded electronics, and parametric design. Experienced in developing custom hardware configurations, executing rigorous academic testing updates, and translating raw concepts into functional prototypes.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div class="project-title">Self-Balancing Autonomous Robot</div>
+                    <div class="project-meta">Embedded Systems & Control | ESP32 Platform</div>
+                    <p>Designed and built a two-wheeled self-balancing robot featuring active stabilization and real-time control loops.</p>
+                    <ul>
+                        <li>Programmed an ESP32 microcontroller using the Arduino IDE to handle high-frequency sensor readings and motor outputs.</li>
+                        <li>Integrated hardware components on a custom breadboard layout, wiring up micro servos, stepper motors, and driver modules.</li>
+                        <li>Calibrated control loop parameters to achieve smooth dynamic balancing and stability under active load changes.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Parametric Hub Design</div>
+                    <div class="project-meta">SolidWorks Modeling & Engineering Layout</div>
+                    <p>Developed a precision 3D CAD model of an engineering hub following strict multi-view geometric standards.</p>
+                    <ul>
+                        <li>Component layout designed with a 24mm outer diameter profile and a 15mm base segment height.</li>
+                        <li>Constructed complex slanted ramp faces and defined exact standard orientation layouts.</li>
+                    </ul>
+                </div>
+                
             </div>
-            
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-            <span class="skill-tag">SolidWorks CAD</span>
-            <span class="skill-tag">ESP32 & Arduino IDE</span>
-            <span class="skill-tag">Micro Servos & Stepper Motors</span>
-            <span class="skill-tag">C++ & Python</span>
-            <span class="skill-tag">Hardware Troubleshooting</span>
-            <span class="skill-tag">Structural Mechanics</span>
-        </div>
-    </section>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag">SolidWorks CAD</span>
+                <span class="skill-tag">ESP32 & Arduino IDE</span>
+                <span class="skill-tag">Micro Servos & Stepper Motors</span>
+                <span class="skill-tag">C++ & Python</span>
+                <span class="skill-tag">Hardware Troubleshooting</span>
+                <span class="skill-tag">Structural Mechanics</span>
+            </div>
+        </section>
 
-    <section id="contact" style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #e2e8f0;">
-        <h2>Get In Touch</h2>
-        <p>Email: your.email@example.com</p>
-        <p>GitHub: <a href="https://github.com/yemaggie" style="color: #4f46e5;">yemaggie</a></p>
-    </section>
+        <section id="contact" style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #e2e8f0;">
+            <h2>Get In Touch</h2>
+            <p>Email: your.email@example.com</p>
+            <p>GitHub: <a href="https://github.com/yemaggie" style="color: #4f46e5;">yemaggie</a></p>
+        </section>
+
+    </div>
 
 </body>
 </html>
